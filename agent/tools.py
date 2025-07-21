@@ -18,23 +18,6 @@ def state_criteria(input: str) -> str:
     - If the state is not in the set of US state abbreviations, return a nearest best guess that is a valid state abbreviation.'
     - Do not return any other text than a US state abbreviation.
 """
-def tool_two(input: str) -> str:
-    """Alternative addition tool. Input should be two space-separated numbers."""
-    try:
-        # Split input into two numbers
-        parts = input.strip().split()
-        if len(parts) != 2:
-            return "Error: Please provide exactly two numbers separated by a space."
-        
-        num1 = float(parts[0])
-        num2 = float(parts[1])
-        result = num1 + num2
-        
-        return str(result)
-    except ValueError:
-        return "Error: Please provide valid numbers."
-    except Exception as e:
-        return f"Error: {str(e)}"
 
 TOOL_LIST = [
     Tool(
@@ -46,10 +29,5 @@ TOOL_LIST = [
         name="StateCriteria",
         func=state_criteria,
         description="State Lookup Tool. Validates US state format. Input should be a state (two letter abbreviation)."
-    ),
-    Tool(
-        name="ToolTwo", 
-        func=tool_two,
-        description="Alternative addition tool. Adds two numbers together. Input should be two space-separated numbers (e.g., '5 3')."
     ),
 ]

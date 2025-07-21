@@ -53,12 +53,12 @@ def main():
     
     # Example 2: Process a state
     print("\n" + "=" * 40)
-    process_field("State", "california")
+    process_field("Email Address", "agent _projectQgmail.co")
     
     # Example 3: Process with custom instructions
     print("\n" + "=" * 40)
-    process_field("State", "CO")
-    process_field("State", "VI")
+    process_field("State", "Wl")
+    process_field("State", "CO v")
 
 
 if __name__ == "__main__":
